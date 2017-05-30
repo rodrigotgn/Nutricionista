@@ -1,0 +1,53 @@
+﻿@using Nutricionista.Utils;
+@model IEnumerable<Nutricionista.Models.DepoimentoItem>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Index";
+}
+
+<br />
+
+
+
+
+<div class="row">
+    <h2>Todos - Depoimento</h2>
+
+    <a class="btn btn-primary" href="@Url.Action("Create")">
+        <i class="fa fa-eye">Novo</i>
+    </a>
+
+</div>
+
+<hr />
+
+<div class="row">
+
+    @foreach (var depoimentoItem in Model)
+    {
+        <div class="col-sm-3">
+            <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <div class="member-image">
+                    @Html.Image(depoimentoItem.DesImagem, "img-responsive")
+                </div>
+                <div class="member-info">
+
+                    <h3>@depoimentoItem.DesNome</h3>
+                    <p>@depoimentoItem.DesDescricao</p>
+                </div>
+                <div class="social-icons">
+
+                    <a class="btn btn-default" href="@Url.Action("Edit")">
+                        <i class="fa fa-eye">Editar</i>
+                    </a>
+                    <a class="btn btn-danger" href="@Url.Action("Delete")">
+                        <i class="fa-trash-o">Excluir</i>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    }
+
+</div>

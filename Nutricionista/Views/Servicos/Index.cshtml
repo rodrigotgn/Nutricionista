@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Nutricionista.Models.Servicos>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <h2>servicos</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        @for (int i = 0; i < 6; i++)
+        {
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 depo-item-col">
+                <div class="depo-item wow @(i % 2 == 0 ? "fadeInRightBig" : "fadeInLeftBig")" data-wow-duration="1000ms" data-wow-delay="300ms">
+                    <div class="depo-image">
+                        <img class="img-responsive" src="images/servicos/@(i % 2 == 0 ? "neymar.jpg" : "bruna-marquezine.jpg")" alt="">
+                    </div>
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <div class="overlay-text">
+                                <div class="depo-info">
+                                    <h3>Time Hours</h3>
+                                    <p>Design, Photography</p>
+                                </div>
+                                <div class="depo-overview">
+                                    <span class="depo-link"><a class="depo-read-more" href="#" data-single_url="single-depoimento.html"><i class="fa fa-link"></i></a></span>
+                                    <span class="depo-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="depoimento"><i class="fa fa-search-plus"></i></a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>
+<div id="portfolio-single-wrap">
+    <div id="portfolio-single">
+    </div>
+</div><!-- /#portfolio-single-wrap -->
