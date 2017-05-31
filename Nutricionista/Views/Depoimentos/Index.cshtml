@@ -25,10 +25,8 @@
                             </div>
                             <div class="member-info">
 
-
-
                                 <h3>@depoimentoItem.DesNome</h3>
-                                <p>@depoimentoItem.DesDescricao</p>
+                                <p>@Html.Raw(depoimentoItem.DesDescricao)</p>
                             </div>
                             <div class="social-icons">
                                 <ul>
@@ -44,7 +42,7 @@
                 }
 
 
-                <div class="col-sm-3">
+                @*<div class="col-sm-3">
                     <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="500ms">
                         <div class="member-image">
                             <img class="img-responsive" src="images/team/2.jpg" alt="">
@@ -106,7 +104,7 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div>*@
             </div>
         </div>
     </div>

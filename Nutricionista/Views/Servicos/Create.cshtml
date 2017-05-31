@@ -1,0 +1,42 @@
+﻿@model Nutricionista.Models.Servicos
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+
+    <h2>Detalhes - Serviços</h2>
+
+    <div class="row">
+        <div class="form-group col-md-7">
+            @Html.LabelFor(model => model.DesTitulo)
+            @Html.EditorFor(model => model.DesTitulo, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.DesTitulo)
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-12">
+            @Html.LabelFor(model => model.DesDescricao)
+            @Html.TextAreaFor(model => model.DesDescricao, new { @class = "summernote" })
+            @Html.ValidationMessageFor(model => model.DesDescricao, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-12">
+            @Html.LabelFor(model => model.DesImagem)
+            @Html.TextBoxFor(m => m.DesImagem, new { @class = "form-control", type = "file" })
+            @Html.ValidationMessageFor(model => model.DesImagem, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <input type="submit" value="Salvar" class="btn btn-primary" />
+
+    @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-default" })
+}

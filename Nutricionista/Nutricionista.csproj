@@ -146,6 +146,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PaginaConstrucaoController.cs" />
+    <Compile Include="Controllers\ServicosController.cs" />
     <Compile Include="Controllers\UtilsController.cs" />
     <Compile Include="Extension\HMTLHelperExtensions.cs" />
     <Compile Include="Global.asax.cs">
@@ -284,6 +285,10 @@
     <Content Include="Views\DepoimentoItem\Index.cshtml" />
     <Content Include="Views\DepoimentoItem\Create.cshtml" />
     <Content Include="Views\Contato\Create.cshtml" />
+    <Content Include="Views\Servicos\Create.cshtml" />
+    <Content Include="Views\Servicos\Delete.cshtml" />
+    <Content Include="Views\Servicos\Details.cshtml" />
+    <Content Include="Views\Servicos\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
